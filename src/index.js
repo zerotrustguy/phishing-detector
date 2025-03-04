@@ -44,8 +44,7 @@ async function analyzeUrl(urlToCheck, env) {
   `;
 
   try {
-    // Call the model
-    //const response = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
+    // Call the AI model
     const response = await env.AI.run('@hf/thebloke/deepseek-coder-6.7b-base-awq', {
       messages: [
         { role: 'system', content: 'You are a cybersecurity expert specializing in URL analysis.' },
